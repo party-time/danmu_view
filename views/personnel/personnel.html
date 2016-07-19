@@ -1,0 +1,140 @@
+<ol class="breadcrumb">
+	<li><a href="#/home">首页</a></li>
+	<li class="active">人员管理</li>
+</ol>
+
+<div class="mb-20 mr-5">
+	<div class="pull-left">
+		<button id="personnel-add" href="#" class="btn mr-5 btn-default">新增</button>
+		<button id="personnel-remove" class="btn btn-default">批量删除</button>
+	</div>
+	<form class="form-inline pull-right">
+		<label for="exampleInputName2">搜索：</label>
+		<input type="text" class="form-control" id="" placeholder="请输入...">
+		<button type="submit" class="btn btn-primary">Send invitation</button>
+	</form>
+	<div class="clearfix"></div>		
+</div>
+<table class="table table-bordered text-center row ml-0">
+	<thead>
+		<tr>
+			<th class="text-center">序号</th>
+			<th class="text-center">名称</th>
+			<th class="text-center">身份</th>
+			<th class="text-center">场次</th>
+			<th class="text-center">创建时间</th>
+			<th class="text-center">编辑</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<label class="checkbox-inline">
+					<input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+				</label>
+			</td>
+			<td>流川枫</td>
+			<td>总管理</td>
+			<td>1</td>
+			<td>2015-1-1 13:50-15:00</td>
+			<td>
+				<button type="button" class="btn btn-info">编辑</button>
+				<button type="button" class="btn btn-primary">删除</button>
+			</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>流川枫</td>
+			<td>总管理</td>
+			<td>1</td>
+			<td>2015-1-1 13:50-15:00</td>
+			<td>
+				<button type="button" class="btn btn-info">编辑</button>
+				<button type="button" class="btn btn-primary">删除</button>
+			</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>流川枫</td>
+			<td>总管理</td>
+			<td>1</td>
+			<td>2015-1-1 13:50-15:00</td>
+			<td>
+				<button type="button" class="btn btn-info">编辑</button>
+				<button type="button" class="btn btn-primary">删除</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div class="paging">
+	<div class="pull-left mr-20">
+		Showing <i>1</i> to <i>10</i> of <i>10</i> items.
+	</div>
+	<div class="pull-left">
+		<span class="mr-5">show</span>
+		<div class="dropdown inline mr-5">
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				Dropdown
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				<li><a href="javascript:;">Action</a></li>
+				<li><a href="javascript:;">Another action</a></li>
+				<li><a href="javascript:;">Something else here</a></li>
+				<li><a href="javascript:;">Separated link</a></li>
+			</ul>
+		</div>
+		<span>items</span>
+	</div>
+	<div class="pull-right mr-5">
+		<ul class="pager m-0">
+			<li><a href="javascript:;">Previous</a></li>
+			<li><a href="javascript:;">Next</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+<!--弹窗-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="exampleModalLabel">新增人员</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-inline">
+					<div class="form-group pb-10">
+						<label for="recipient-name" class="mr-15">ID:</label>
+						<input type="text" class="form-control inline" id="recipient-name">
+					</div>
+					<div class="form-group pb-10">
+						<label for="message-password" class="control-label">密码:</label>
+						<input type="text" class="form-control" id="recipient-password">
+					</div>
+					<div class="form-group pb-10">
+						<label for="message-identity" class="control-label">身份:</label>
+						<div class="dropdown inline mr-5">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								Dropdown
+								<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+								<li><a href="javascript:;">Action</a></li>
+								<li><a href="javascript:;">Another action</a></li>
+								<li><a href="javascript:;">Something else here</a></li>
+								<li><a href="javascript:;">Separated link</a></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer border-none">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Send message</button>
+			</div>
+		</div>
+	</div>
+</div>

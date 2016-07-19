@@ -1,0 +1,75 @@
+<ol class="breadcrumb">
+    <li><a href="#/home">首页</a></li>
+    <li class="active">弹幕管理</li>
+</ol>
+<div class="container" ng-controller="danmusetController">
+    <form class="form-horizontal">
+        <div class="col-sm-12">
+            <div class="form-group">
+
+                <!--
+                <div class="switch" data-on-label="<i class='icon-ok icon-white'></i>" data-off-label="<i class='icon-remove'></i>" data-on="success" data-off="warning">
+                    <input type="checkbox" name="my-checkbox"  checked />
+                </div>
+                -->
+                <label class="col-sm-4 control-label">严格度:</label>
+
+                <div class="col-sm-8">
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0" ng-model="strictstatus"/>一般
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" ng-model="strictstatus"/>严格
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">延迟时间:</label>
+
+                <div class="col-sm-4">
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon" ng-click='reduceDalyTime(delayTime)'>-</div>
+                        <input type="text" class="form-control"  value="0" ng-model="delayTime"/>
+
+                        <div class="input-group-addon" ng-click='addDalyTime()'>+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">处理单条弹幕时间:</label>
+
+                <div class="col-sm-4">
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon" ng-click='reduceDealTime(dealTime)'>-</div>
+                        <input type="text" class="form-control" value="0" ng-model="dealTime"/>
+
+                        <div class="input-group-addon" ng-click='addDealTime()'>+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">处理的弹幕数:</label>
+
+                <div class="col-sm-4">
+                    <div class="input-group col-sm-4">
+                        <div class="input-group-addon" ng-click='reduceDanmuCount(danmuCount)'>-</div>
+                        <input type="text" class="form-control" value="0" ng-model="danmuCount"/>
+                        <div class="input-group-addon" ng-click='addDanmuCount()'>+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <div class="col-sm-offset-1 col-sm-6">
+                <button type="submit" class="btn btn-default mr-20" data-ng-click="save()">保存</button>
+                <button type="button" class="btn btn-default ml-20">重置</button>
+            </div>
+        </div>
+    </form>
+</div>

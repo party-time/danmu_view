@@ -1,0 +1,97 @@
+.mb-0 {
+  margin-bottom: 0;
+}
+.p-0 {
+  padding: 0;
+}
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+.ml-0 {
+  margin-left: 0;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.m-0 {
+  margin: 0;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-123 {
+  margin-top: 123px;
+}
+.inline {
+  display: inline-block;
+}
+.h300 {
+  height: 300px !important;
+}
+.ml13 {
+  margin-left: -13px;
+}
+.mr17 {
+  margin-right: -17px;
+}
+.square {
+  width: 50px;
+  height: 50px;
+}
+.qr-code {
+  width: 150px;
+  height: 150px;
+}
+.text-right {
+  text-align: right;
+}
+.border-none {
+  border: none;
+}
+.border-b {
+  border-bottom: 1px solid #eee;
+}
+.lh34 {
+  line-height: 34px;
+}
+.lh150 {
+  line-height: 150px;
+}
+.paging span,
+.paging i {
+  line-height: 34px;
+}
+.list-group {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.list-group-item {
+  margin-bottom: 0;
+  border-radius: 4px;
+}
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

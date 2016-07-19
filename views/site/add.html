@@ -1,0 +1,94 @@
+<ol class="breadcrumb">
+	<li><a href="#/home">首页</a></li>
+	<li><a href="#/site">场地列表</a></li>
+	<li class="active">创建新场地</li>
+</ol>
+<div class="border-b mb-20">
+	<h3>
+		创建新场地
+	</h3>
+</div>
+<div>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">名称</label>
+			<div class="col-sm-5">
+				<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword3" class="col-sm-2 control-label">地区</label>
+			<div class="col-sm-5">
+				<div class="dropdown col-sm-3 p-0">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						{{ province }}
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li ng-repeat="city in citys" ng-click='cityName($index)'>
+							<a href="javascript:;">{{city.name}}</a>
+						</li>
+<!--
+						<li><a href="javascript:;">Action</a></li>
+						<li><a href="javascript:;">Another action</a></li>
+						<li><a href="javascript:;">Something else here</a></li>
+						<li><a href="javascript:;">Separated link</a></li>
+-->
+					</ul>
+				</div>
+				<div class="col-sm-4 clearfix"></div>
+				<div class="dropdown col-sm-3 p-0">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						{{ areaName }}
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li ng-repeat="area in areas" ng-click='areasName($index)'>
+							<a href="javascript:;">{{ area }}</a>
+						</li>
+<!--
+						<li><a href="javascript:;">Action</a></li>
+						<li><a href="javascript:;">Another action</a></li>
+						<li><a href="javascript:;">Something else here</a></li>
+						<li><a href="javascript:;">Separated link</a></li>
+-->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">地址</label>
+			<div class="col-sm-5">
+				<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">类型</label>
+			<div class="col-sm-5">
+				<div class="dropdown col-sm-3 p-0">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					Dropdown
+					<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="javascript:;">Action</a></li>
+						<li><a href="javascript:;">Another action</a></li>
+						<li><a href="javascript:;">Something else here</a></li>
+						<li><a href="javascript:;">Separated link</a></li>
+					</ul>
+				</div>
+				<div class="clearfix inline col-sm-2"></div>
+				<a class="lh34" href="javascript:;">
+					添加新类型
+				</a>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default mr-20">创建</button>
+				<button type="button" class="btn btn-default ml-20">取消</button>
+			</div>
+		</div>
+	</form>
+</div>
+

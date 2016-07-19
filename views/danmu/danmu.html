@@ -1,0 +1,85 @@
+<ol class="breadcrumb">
+    <li><a href="#/home">首页</a></li>
+    <li class="active">弹幕审核</li>
+</ol>
+<div class="container" ng-controller="danmuController">
+    <div>
+        <span>系统时间: {{systemTime | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        连接状态：
+            <span ng-switch="onlineStatus">
+                <span ng-switch-when="1">在线</span>
+                <span ng-switch-when="0">掉线</span>
+            </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        严格度：
+            <span ng-switch="strictStatus">
+                <span ng-switch-when="1">严格</span>
+                <span ng-switch-when="0">一般</span>
+            </span>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        处理延迟:{{delayTime}}秒
+
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        弹幕处理开始:
+        <input type="checkbox" name="favoriteColors" ng-model="isAccept" ng-click="check(isAccept)"/>
+        <!--
+        <div class="switch" data-on="danger" data-off="primary">
+            <input type="checkbox" checked />
+        </div>
+        -->
+    </div>
+    <hr/>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div>弹幕条数:<font color="red">{{sum}}</font></div>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>弹幕</th>
+                        <th>时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="x in danmulist">
+                        <td>
+                            <span ng-bind="x.id"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="x.message"></span>
+                        </td>
+                        <td>
+                            <span>{{x.time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+                        </td>
+                        <td>
+                            <div ng-switch="x.delaytime">
+                                <div ng-switch-when="0">
+                                    <span>发送完毕</span>
+                                </div>
+                                <div ng-switch-default>
+
+                                    <button>
+                                        <span class="glyphicon glyphicon-delete"></span>剩余时间{{x.delaytime}}
+                                        <!--{{ x.date | date:'ss' }}-->
+                                    </button>
+                                    <button ng-click="deleletDanmu(x)">
+                                        删除
+                                    </button>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+</div>
